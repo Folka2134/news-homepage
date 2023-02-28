@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App bg-white">
-      <div className=" m-6">
+      <div className="m-6 sm:m-16 md:m-32 lg:m-52">
         <nav className="flex justify-between items-center py-10 px-6">
           <svg width="65" height="40" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -28,9 +28,9 @@ function App() {
           </svg>
         </nav>
         <main className="flex flex-col">
-          <div className="flex flex-col">
-            {innerWidth < 1500 ? (
-              <img src={bannerMobile} alt="banner" />
+          <div className="flex flex-col items-center">
+            {innerWidth < 600 ? (
+              <img className="h-80 w-96" src={bannerMobile} alt="banner" />
             ) : (
               <img src={bannerDesktop} alt="banner" />
             )}
