@@ -1,10 +1,15 @@
+import { useState } from "react";
+
 import "./App.css";
-import banner from "./assets/images/image-web-3-mobile.jpg";
+import bannerDesktop from "./assets/images/image-web-3-desktop.jpg";
+import bannerMobile from "./assets/images/image-web-3-mobile.jpg";
 import retroPc from "./assets/images/image-retro-pcs.jpg";
 import laptop from "./assets/images/image-top-laptops.jpg";
 import controller from "./assets/images/image-gaming-growth.jpg";
 
 function App() {
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+
   return (
     <div className="App bg-white">
       <div className=" m-6">
@@ -16,7 +21,7 @@ function App() {
             />
           </svg>
           <svg width="40" height="17" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#00001A" fill-rule="evenodd">
+            <g fill="#00001A" fillRule="evenodd">
               <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
               <path d="M0 0h40v3H0z" />
             </g>
@@ -24,7 +29,11 @@ function App() {
         </nav>
         <main className="flex flex-col">
           <div className="flex flex-col">
-            <img src={banner} alt="banner" />
+            {innerWidth < 1500 ? (
+              <img src={bannerMobile} alt="banner" />
+            ) : (
+              <img src={bannerDesktop} alt="banner" />
+            )}
             <h1 className="text-5xl font-bold my-5">
               The Bright Future of Web 3.0?
             </h1>
