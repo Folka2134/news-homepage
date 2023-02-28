@@ -67,7 +67,7 @@ function App() {
             </div>
           </div>
         </main>
-        <div className="flex flex-col">
+        <article className="flex flex-col">
           <div className="flex mb-10">
             <img className="w-32" src={retroPc} alt="retro PC" />
             <div className="flex flex-col justify-evenly pl-6">
@@ -98,7 +98,7 @@ function App() {
               </p>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   );
