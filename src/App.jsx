@@ -1,5 +1,8 @@
 import "./App.css";
 import banner from "./assets/images/image-web-3-mobile.jpg";
+import retroPc from "./assets/images/image-retro-pcs.jpg";
+import laptop from "./assets/images/image-top-laptops.jpg";
+import controller from "./assets/images/image-gaming-growth.jpg";
 
 function App() {
   return (
@@ -65,23 +68,35 @@ function App() {
           </div>
         </main>
         <div className="flex flex-col">
-          <div>
-            <img src="" alt="" />
-            <h3>01</h3>
-            <h4>Reviving Retro PCs</h4>
-            <p>What happens when old PCs are given modern upgrades?</p>
+          <div className="flex mb-10">
+            <img className="w-32" src={retroPc} alt="retro PC" />
+            <div className="flex flex-col justify-evenly pl-6">
+              <h3 className="text-4xl text-gray-400 font-semibold">01</h3>
+              <h4 className="text-xl font-bold">Reviving Retro PCs</h4>
+              <p className="text-gray-500">
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
           </div>
-          <div>
-            <img src="" alt="" />
-            <h3>02</h3>
-            <h4>Top 10 Laptops of 2022</h4>
-            <p>Our best picks for various needs and budgets.</p>
+          <div className="flex mb-10">
+            <img className="w-32" src={laptop} alt="" />
+            <div className="flex flex-col justify-evenly pl-6">
+              <h3 className="text-4xl text-gray-400 font-semibold">02</h3>
+              <h4 className="text-xl font-bold">Top 10 Laptops of 2022</h4>
+              <p className="text-gray-500">
+                Our best picks for various needs and budgets.
+              </p>
+            </div>
           </div>
-          <div>
-            <img src="" alt="" />
-            <h3>03</h3>
-            <h4>The Growth of Gaming</h4>
-            <p>How the pandemic has sparked fresh opportunities.</p>
+          <div className="flex mb-10">
+            <img className="w-32" src={controller} alt="" />
+            <div className="flex flex-col justify-evenly pl-6">
+              <h3 className="text-4xl text-gray-400 font-semibold">03</h3>
+              <h4 className="text-xl font-bold">The Growth of Gaming</h4>
+              <p className="text-gray-500">
+                How the pandemic has sparked fresh opportunities.
+              </p>
+            </div>
           </div>
         </div>
       </div>
