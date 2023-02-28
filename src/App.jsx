@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App bg-white">
-      <div className="m-6 sm:m-16 md:m-32 lg:m-52">
+      <div className="m-6 sm:m-16 md:m-32 lg:m-52 2xl:m-24">
         <nav className="flex justify-between items-center py-10 px-6">
           <svg width="65" height="40" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -28,86 +28,90 @@ function App() {
           </svg>
         </nav>
         <main className="flex flex-col">
-          <div className="flex flex-col items-center">
-            {innerWidth < 600 ? (
-              <img className="h-80 w-96" src={bannerMobile} alt="banner" />
-            ) : (
-              <img src={bannerDesktop} alt="banner" />
-            )}
-            <h1 className="text-5xl font-bold my-5">
-              The Bright Future of Web 3.0?
-            </h1>
-            <div className="flex-flex-col">
-              <p className="text-gray-500">
-                We dive into the next evolution of the web that claims to put
-                the power of the platforms back into the hands of the people.
-                But is it really fulfilling its promise?
-              </p>
-              <button className="text-md uppercase font-semibold tracking-widest text-white bg-red-500 hover:bg-red-400 px-10 py-3 mt-5">
-                Read more
-              </button>
+          <div className="2xl:flex 2xl:my-16">
+            <div className="flex flex-col items-center">
+              {innerWidth < 600 ? (
+                <img className="h-80 w-96" src={bannerMobile} alt="banner" />
+              ) : (
+                <img src={bannerDesktop} alt="banner" />
+              )}
+              <div className="2xl:flex 2xl:items-center 2xl:h-full 2xl:p-10">
+                <h1 className="text-5xl font-bold my-5 flex-1 2xl:mr-24">
+                  The Bright Future of Web 3.0?
+                </h1>
+                <div className="flex-flex-col flex-1">
+                  <p className="text-gray-500">
+                    We dive into the next evolution of the web that claims to
+                    put the power of the platforms back into the hands of the
+                    people. But is it really fulfilling its promise?
+                  </p>
+                  <button className="text-md uppercase font-semibold tracking-widest text-white bg-red-500 hover:bg-red-400 px-10 py-3 mt-5">
+                    Read more
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col my-16 2xl:my-0 2xl:ml-10 bg-[#00001A] text-white p-8">
+              <h1 className="text-4xl font-semibold text-[#ECB25B]">New</h1>
+              <div className="py-8 border-b-2 border-gray-500">
+                <h3 className="text-2xl font-semibold mb-4">
+                  Hydrogen VS Electric Cars
+                </h3>
+                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+              </div>
+              <div className="py-8 border-b-2 border-gray-500">
+                <h3 className="text-2xl font-semibold mb-4">
+                  The Downsides of AI Artistry
+                </h3>
+                <p>
+                  What are the possible adverse effects of on-demand AI image
+                  generation?
+                </p>
+              </div>
+              <div className="pt-8 ">
+                <h3 className="text-2xl font-semibold mb-4">
+                  Is VC Funding Drying Up?
+                </h3>
+                <p>
+                  Private funding by VC firms is down 50% YOY. We take a look at
+                  what that means.
+                </p>
+              </div>
             </div>
           </div>
-          <div className="flex flex-col my-16 bg-[#00001A] text-white p-8">
-            <h1 className="text-4xl font-semibold text-[#ECB25B]">New</h1>
-            <div className="py-8 border-b-2 border-gray-500">
-              <h3 className="text-2xl font-semibold mb-4">
-                Hydrogen VS Electric Cars
-              </h3>
-              <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          <article className="flex flex-col 2xl:flex-row 2xl:justify-between">
+            <div className="flex mb-10">
+              <img className="w-32" src={retroPc} alt="retro PC" />
+              <div className="flex flex-col justify-evenly pl-6">
+                <h3 className="text-4xl text-gray-400 font-semibold">01</h3>
+                <h4 className="text-xl font-bold">Reviving Retro PCs</h4>
+                <p className="text-gray-500">
+                  What happens when old PCs are given modern upgrades?
+                </p>
+              </div>
             </div>
-            <div className="py-8 border-b-2 border-gray-500">
-              <h3 className="text-2xl font-semibold mb-4">
-                The Downsides of AI Artistry
-              </h3>
-              <p>
-                What are the possible adverse effects of on-demand AI image
-                generation?
-              </p>
+            <div className="flex mb-10">
+              <img className="w-32" src={laptop} alt="" />
+              <div className="flex flex-col justify-evenly pl-6">
+                <h3 className="text-4xl text-gray-400 font-semibold">02</h3>
+                <h4 className="text-xl font-bold">Top 10 Laptops of 2022</h4>
+                <p className="text-gray-500">
+                  Our best picks for various needs and budgets.
+                </p>
+              </div>
             </div>
-            <div className="pt-8 ">
-              <h3 className="text-2xl font-semibold mb-4">
-                Is VC Funding Drying Up?
-              </h3>
-              <p>
-                Private funding by VC firms is down 50% YOY. We take a look at
-                what that means.
-              </p>
+            <div className="flex mb-10">
+              <img className="w-32" src={controller} alt="" />
+              <div className="flex flex-col justify-evenly pl-6">
+                <h3 className="text-4xl text-gray-400 font-semibold">03</h3>
+                <h4 className="text-xl font-bold">The Growth of Gaming</h4>
+                <p className="text-gray-500">
+                  How the pandemic has sparked fresh opportunities.
+                </p>
+              </div>
             </div>
-          </div>
+          </article>
         </main>
-        <article className="flex flex-col">
-          <div className="flex mb-10">
-            <img className="w-32" src={retroPc} alt="retro PC" />
-            <div className="flex flex-col justify-evenly pl-6">
-              <h3 className="text-4xl text-gray-400 font-semibold">01</h3>
-              <h4 className="text-xl font-bold">Reviving Retro PCs</h4>
-              <p className="text-gray-500">
-                What happens when old PCs are given modern upgrades?
-              </p>
-            </div>
-          </div>
-          <div className="flex mb-10">
-            <img className="w-32" src={laptop} alt="" />
-            <div className="flex flex-col justify-evenly pl-6">
-              <h3 className="text-4xl text-gray-400 font-semibold">02</h3>
-              <h4 className="text-xl font-bold">Top 10 Laptops of 2022</h4>
-              <p className="text-gray-500">
-                Our best picks for various needs and budgets.
-              </p>
-            </div>
-          </div>
-          <div className="flex mb-10">
-            <img className="w-32" src={controller} alt="" />
-            <div className="flex flex-col justify-evenly pl-6">
-              <h3 className="text-4xl text-gray-400 font-semibold">03</h3>
-              <h4 className="text-xl font-bold">The Growth of Gaming</h4>
-              <p className="text-gray-500">
-                How the pandemic has sparked fresh opportunities.
-              </p>
-            </div>
-          </div>
-        </article>
       </div>
     </div>
   );
